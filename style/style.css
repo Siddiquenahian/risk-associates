@@ -416,7 +416,14 @@ nav .wrapper {
   transform-style: preserve-3d;
   border-radius: 10px;
 }
-
+.section .flip-card img{
+  width: 50%;
+  height: 50%;
+}
+.section .flip-card .btn-primary{
+  background: #d9d9d9 !important;
+  color: #f54828;
+}
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -438,6 +445,12 @@ nav .wrapper {
   color: white;
   transform: rotateY(180deg);
   padding: 20px;
+}
+.flip-card-back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .flip-card img {
