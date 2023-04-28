@@ -1,0 +1,456 @@
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar-one {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  height: 50px;
+}
+.navbar-one .email .mail-us {
+  display: none;
+}
+.left > div:hover,
+.right > div:hover {
+  color: black;
+  transition: all 0.5s;
+}
+.right span {
+  font-weight: bold;
+  border-left: 1px solid white;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+.right a {
+  padding-right: 10px;
+}
+.navbar-two {
+  position: absolute;
+  background: white;
+  width: 100%;
+  z-index: 1;
+  height: auto;
+  line-height: 75px;
+  top: 50;
+}
+.navbar2-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.navbar-two .nav-links i {
+  padding-left: 10px;
+}
+nav .wrapper {
+  position: relative;
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-two .wrapper img {
+  height: 70px;
+}
+.wrapper .logo a {
+  color: #f54828;
+  text-decoration: none;
+  font-size: 27px;
+  font-weight: 600;
+}
+.wrapper .nav-links {
+  display: inline-flex;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  transition: all 0.5s ease;
+}
+.nav-links .contact {
+  color: white;
+  background: #f54828;
+  padding: 15px 15px 20px;
+}
+.nav-links li a:hover {
+  color: rgb(6, 6, 253);
+}
+.nav-links .drop-menu {
+  background: white;
+  width: 180px;
+  top: 85px;
+  line-height: 45px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999;
+}
+.drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-menu {
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.mega-menu {
+  position: absolute;
+  top: 85px;
+  background: white;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99999;
+}
+.mega-menu header {
+  font-weight: bold;
+  color: #f54828;
+  font-size: 20px;
+}
+.mega-menu .content {
+  background: white;
+  padding: 10px 15px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  line-height: 30px;
+}
+.content .row {
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row .megalinks {
+  margin-left: -40px;
+  border-left: 1px solid rgba(22, 20, 20, 0.09);
+}
+.content .row:nth-child(1),
+.content .row:nth-child(2) {
+  border-left: 0px;
+}
+.row .megalinks li {
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 17px;
+  display: block;
+}
+.nav-links .mobile-itme {
+  display: none;
+}
+.wrapper .btn {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn .cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 10rem !important;
+  z-index: 1;
+  align-items: center !important;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background: black;
+  color: white;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+.overlay-image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+.btn-primary{
+  background: #f54828 !important;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+/* -----------------------------
+---------------------------------
+---------------------------------
+--------------------------------
+-------------------------------
+---------------------------- */
+@media screen and (max-width: 970px) {
+  .navbar-one .email .about {
+    display: none;
+  }
+  .navbar-one .email .mail-us {
+    display: block;
+  }
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    display: block;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    line-height: 50px;
+    padding: 50px 10px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+    z-index: 999;
+  }
+  #menu-btn:checked ~ .btn .menu-btn {
+    display: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    width: 0px;
+  }
+  .nav-links li {
+    margin: 15px 10px;
+  }
+  .nav-links li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    top: 65px;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .nav-links .drop-menu li {
+    margin: 0;
+  }
+  .nav-links .drop-menu li a {
+    font-size: 18px;
+    border-radius: 5px;
+  }
+  .nav-links .mobile-itme {
+    display: block;
+    font-size: 20px;
+    color: black;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-itme:hover {
+    color: rgb(6, 6, 253);
+  }
+  .nav-links .desktop-item {
+    display: none;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-menu {
+    max-height: 100%;
+  }
+  .mega-menu {
+    position: static;
+    top: 65px;
+    background: white;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-menu .content {
+    background: white;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-menu .content .row {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+  }
+  .mega-menu .content .row:nth-child(1),
+  .mega-menu .content .row:nth-child(2) {
+    border-top: 0px;
+  }
+  .content .row .megalinks {
+    border-left: 0px;
+    padding: 15px;
+  }
+  .row .megalinks li {
+    margin: 0;
+  }
+  .contact .row header {
+    font-size: 19px;
+  }
+  .nav-links .contact {
+    color: white;
+    background: #f54828;
+    padding: 15px 15px 20px;
+    width: 150px;
+  }
+}
+.wrapper input {
+  display: none;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 2rem;
+  }
+}
+
+ div .service-text{
+  margin-top: 60px;
+  margin-bottom: 0px;
+  background: rgb(238, 244, 246);
+  padding-top: 30px;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgb(238, 244, 246);
+  /* margin-top: 50px; */
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #f54828;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #f54828;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.flip-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flip-card h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+
